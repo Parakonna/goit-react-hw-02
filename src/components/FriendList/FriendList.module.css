@@ -1,0 +1,21 @@
+ul, ol{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+.list{
+    margin-top: 40px;
+    width: auto;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    border-radius: 5px;
+border: 1px solid black;
+}

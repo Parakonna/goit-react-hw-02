@@ -1,0 +1,69 @@
+ .userInfo{width: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 3px solid black;
+    border-radius: 5px;
+    }  
+.img {
+    width: 370px;
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.icon{
+    width: auto;
+margin-top: 20px;
+display: block;
+object-fit: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    background-color: black;
+}
+.name{margin-top: 0;
+    margin-bottom: 0;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.gmail, .location {
+    margin-top: 0;
+        margin-bottom: 0;
+    font-size: 24px;
+ color: dimgray;
+text-align: center;
+}
+.list{
+    width: 367px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(221, 218, 218);
+}
+ 
+.item{
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        height: 80px;
+        width: calc(450px / 3);
+    border: 1px solid black;
+}
+
+.sp, .fol {
+    display: block;
+    text-align: center;
+    color: black;
+    font-size: 24px;
+}
+
+.fol {
+    font-weight: 600;
+}

@@ -1,0 +1,16 @@
+.conteiner{
+margin: 10px;
+}
+
+.name{
+text-align: center;
+font-size: 24px;
+}
+
+.offline {
+color:brown; 
+}
+
+.online {
+    color:darkgreen;
+}
