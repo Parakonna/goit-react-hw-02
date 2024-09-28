@@ -1,24 +1,32 @@
-import Profile from "./components/Profile/Profile";
-import FriendList from "./components/FriendList/FriendList";
-import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
-import transactions from "./data/transactions.json";
-import userData from "./data/userData.json";
-import friends from "./data/friends.json";
+import Options from "./components/Options/Options";
+import Description from "./components/Description/Description";
+import Feedback from "./components/Feedback/Feedback";
+import Notification from "./components/Notification/Notification"
+import { useState } from "react";
+
 
 
 
 const App = () => {
+  const [count, setCount] = useState({
+    good: 0,
+    neutral: 0,
+    bad: 0
+  });
+
+  const updateFeedback = (feedbackType) => {
+    setCount({ ...count, [feedbackType]: count[feedbackType] + 1 });
+  }
+
+  const totalFeedback = count.good + count.neutral + count.bad;
+
  return (
 <>
-     <Profile
-       name={userData.username}
-       tag={userData.tag}
-       location={userData.location}
-       image={userData.avatar}
-       stats={userData.stats}
-      />
-      <FriendList friends={friends} />
-    <TransactionHistory items={transactions} />
+     <Description />
+     <Options updateFeedback={updateFeedback}
+       totalFeedback={totalFeedback} />
+     {totalFeedback === 0 && <Notification />}
+     {totalFeedback > 0 && <Feedback  count={count}/>}
 </>
 );
 };
