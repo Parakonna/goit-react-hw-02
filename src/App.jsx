@@ -4,7 +4,6 @@ import Feedback from "./components/Feedback/Feedback";
 import Notification from "./components/Notification/Notification"
 import { useEffect, useState } from "react";
 
-
 const App = () => {
   const [count, setCount] = useState( () => {
         const val = localStorage.getItem("countValue");
