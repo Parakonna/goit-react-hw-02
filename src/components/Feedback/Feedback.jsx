@@ -1,13 +1,14 @@
-import React from 'react'
+import css from './Feedback.module.css'
 
-const Feedback = ({count}) => {
+const Feedback = ({count,totalFeedback, positiveFeedback}) => {
   return (
-    <div>
-      <ul>
-        <li>Good: {count.good}</li>
-        <li>Neutral: {count.neutral}</li>
-        <li>Bad: {count.bad}</li>
-       
+    <div >
+      <ul >
+        <li className={css.feedback}>Good: {count.good}</li>
+        <li className={css.feedback}>Neutral: {count.neutral}</li>
+        <li className={css.feedback}>Bad: {count.bad}</li>
+        <li className={css.feedback}>Total: {totalFeedback}</li>
+        <li className={css.feedback}>Positive: {positiveFeedback}%</li>
       </ul>
     </div>
   )
