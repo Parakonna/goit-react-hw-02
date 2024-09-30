@@ -7,7 +7,11 @@ import { useEffect, useState } from "react";
 const App = () => {
   const [count, setCount] = useState( () => {
         const val = localStorage.getItem("countValue");
-        const parsedVal = JSON.parse(val) ?? 0;
+        const parsedVal = JSON.parse(val) ?? {
+      good: 0,
+      neutral: 0,
+      bad: 0
+    };
         return parsedVal;
   });
 
